@@ -1,0 +1,52 @@
+<%- include('../layouts/header') %>
+
+<div class="container">
+    <div class="heading"> ALL DATA </div>
+    <a href="/add" class="btn btn-success">Add</a>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Fullname</th>
+            <th scope="col">gender</th>
+            <th scope="col">maths</th>
+            <th scope="col">cs</th>
+            <th scope="col">physics</th>
+            <th scope="col">Chemistry</th>
+            <th scope="col">total(400)</th>
+            <th colspan="col">percentage</th>
+            <th colspan="col">grade</th>
+            <th colspan="col">Resullt</th>
+            <th colspan="col">Action</th>
+
+          </tr>
+          <% all_data.map(data => { %>
+            <tr>
+              <td> <img src="/uploads/<%= data.image %>" width="80" height="80"> </td>
+              <td><%=  data.fullname %> </td>
+              <td><%=  data.gender %> </td>
+              <td><%=  data.maths %> </td>
+              <td><%=  data.cs %> </td>
+              <td><%=  data.physics %> </td>
+              <td><%=  data.chemistry %> </td>
+              <td><%=  data.total %></td>
+              <td><%=  data.percentage %>% </td>
+              <td><%=  data.grade %> </td>
+             
+              <% if(data.grade!='F') { %>      
+                <td style="color:green"> <b>PASS</b> </td>   
+                <% } else { %>
+                <td style="color:red"><b>FAIL</b></td> 
+                <% } %>  
+                <td><a href="/delete/<%= data._id %>" class="btn btn-danger">Delete</a></td>  
+          
+            </tr>
+          <% }) %>
+        </thead>
+        </tbody>
+      </table>
+</div>
+
+
+
+<%- include('../layouts/footer') %>

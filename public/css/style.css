@@ -1,0 +1,21 @@
+.heading {
+    font-size: 24px;
+    color: rgb(33, 2, 2);
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+    text-align: center;
+}
+
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    min-height: 400px;
+    text-align: center;
+    background-color: rgb(165, 229, 229);
+}
+

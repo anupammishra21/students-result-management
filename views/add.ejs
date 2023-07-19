@@ -1,0 +1,80 @@
+<%- include('../layouts/header') %>
+
+    <div class="container">
+        <div class="heading">ADD DATA</div>
+         <form method="post" action="/insert" enctype="multipart/form-data" >
+            <div class="form-group">
+                <label>FirstName</label>
+                <input type="text" class="form-control" id="firstname" placeholder="Enter your firstname" name="firstname">
+            </div>
+
+            <div class="form-group">
+                <label>lastName</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Enter your lastname" name="lastname">
+            </div>
+
+            <input type="hidden" class="form-control" id="fullname"  name="fullname">
+            
+           
+           
+
+            <div class="form-group">
+                <label for="gender"> gender </label>
+                <input type="radio" name="gender" value="male" checked> Male
+                <input type="radio" name="gender" value="male"> Female
+               
+            </div>
+
+            <div class="form-group">
+                <label>math</label>
+                <input type="number" class="form-control" id="maths" placeholder="Enter math no" name="maths">
+            </div>
+
+            <div class="form-group">
+                <label>cs</label>
+                <input type="number" class="form-control" id="cs" placeholder="Enter cs no" name="cs">
+            </div>
+            <div class="form-group">
+                <label>physics</label>
+                <input type="number" class="form-control" id="physics" placeholder="Enter physics no" name="physics">
+            </div>
+            <div class="form-group">
+                <label>chemistry</label>
+                <input type="number" class="form-control" id="chemistry" placeholder="Enter chemistry no" name="chemistry">
+            </div>
+
+          
+            <input type="hidden" id="total" name="total">
+            <input type="hidden" id="percentage" name="percentage">
+            <input type="hidden" id="grade" name="grade">
+
+
+            
+
+
+    
+
+            <div class="form-group">
+                <label>Image</label>
+                <input type="file" multiple name="image" id="image" class="form-control">
+            </div>
+
+          
+
+
+
+
+
+
+
+
+
+
+
+        
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Save</button>
+        </form>
+    </div>
+
+<%- include('../layouts/footer') %>
+
